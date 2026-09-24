@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="乌玛·瑟曼 Uma Thurman 致敬主页：简介、电影作品、生平大事记与荣誉名言，支持中英文切换。">
+<title>乌玛·瑟曼 Uma Thurman · 致敬主页</title>
+<link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="12" fill="%23C01028"/%3E%3Ctext x="32" y="45" font-family="Georgia,serif" font-size="38" font-weight="700" text-anchor="middle" fill="%23FCFAF7"%3EU%3C/text%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== Design tokens ===== */
+:root{
+  --paper:#FCFAF7;
+  --ink:#1B1B1B;
+  --body:#333333;
+  --soft:#56524C;
+  --muted:#8A857E;
+  --line:#E7E1D9;
+  --red:#C01028;
+  --serif:'Playfair Display','Noto Serif SC','Songti SC','SimSun',serif;
+  --sans:'Inter','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+}
+/* ===== Reset & base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html[data-lang="zh"] .en{display:none}
+html[data-lang="en"] .zh{display:none}
+body{font-family:var(--sans);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+
+/* ===== 顶部导航 ===== */
+.site-nav{position:sticky;top:0;z-index:50;background:rgba(252,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.05rem;letter-spacing:.14em;color:var(--ink);white-space:nowrap}
+.brand em{font-style:normal;color:var(--red)}
+.nav-links{display:flex;gap:clamp(14px,3vw,34px)}
+.nav-links a{font-size:13px;letter-spacing:.08em;color:var(--soft);padding:8px 0;position:relative;white-space:nowrap}
+.nav-links a.active{color:var(--ink);font-weight:500}
+.nav-links a.active::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--red)}
+.lang-btn{border:1px solid var(--line);background:transparent;color:var(--ink);padding:7px 16px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.14em;cursor:pointer;transition:border-color .25s,color .25s;flex-shrink:0}
+.lang-btn:hover{border-color:var(--red);color:var(--red)}
+
+/* ===== 页面切换 ===== */
+.page{display:none}
+.page.active{display:block;animation:pageIn .5s ease both}
+@keyframes pageIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .page.active{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ===== Hero（首页） ===== */
+.hero{padding:clamp(5.5rem,13vh,8.5rem) 0 clamp(3.5rem,7vh,5.5rem)}
+.hero .kicker{font-size:12px;font-weight:600;letter-spacing:.38em;text-transform:uppercase;color:var(--red);margin-bottom:26px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(3.1rem,9.5vw,7.6rem);line-height:1.04;letter-spacing:-.01em;color:var(--ink)}
+.hero-rule{width:64px;height:2px;background:var(--red);margin:2.4rem 0 1.8rem}
+.hero .sub{font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.hero .scrollcue{display:flex;align-items:center;gap:12px;margin-top:clamp(3rem,7vh,5rem);color:var(--muted);font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+.hero .scrollcue svg{animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(6px);opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero .scrollcue svg{animation:none}}
+
+/* ===== 通用区块 ===== */
+.section{padding:clamp(4.2rem,8vw,7rem) 0}
+.section-head{margin-bottom:clamp(2.6rem,5vw,4rem)}
+.section-head .kicker{font-size:12px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.sec-title{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.15;color:var(--ink)}
+.sec-rule{width:56px;height:2px;background:var(--red);margin-top:1.2rem}
+
+/* ===== 简介板块 ===== */
+.intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(2.4rem,6vw,5.5rem)}
+.figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.fig-caption{margin-top:16px;font-size:12px;color:var(--muted);letter-spacing:.06em;line-height:1.6;border-left:2px solid var(--red);padding-left:13px}
+.intro-copy{display:flex;flex-direction:column}
+.anchor-label{font-weight:700;letter-spacing:.32em;font-size:13px;color:var(--ink);margin-bottom:1.3rem}
+.copy-block p{color:var(--body);line-height:1.8;margin-bottom:1.5rem;max-width:34em}
+.copy-block p:last-child{margin-bottom:0}
+.quote{font-family:var(--serif);font-style:italic;font-size:1.12rem;line-height:1.75;color:#55504A;margin-top:auto;padding-top:1.5rem;border-top:1px solid var(--line)}
+.quote cite{display:block;font-style:normal;font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+
+/* ===== 个人档案 ===== */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 2.6rem;padding:2.6rem 0}
+.fact .k{font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
+.fact .v{font-family:var(--serif);font-size:1.06rem;color:var(--ink);line-height:1.55}
+
+/* ===== 作品页 ===== */
+.films-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.6rem,3vw,2.6rem)}
+.film .ph{aspect-ratio:16/10;overflow:hidden;border-radius:3px}
+.film img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.film:hover img{transform:scale(1.035)}
+.film .year{font-family:var(--serif);font-style:italic;color:var(--red);font-size:.98rem;margin-top:1.3rem}
+.film h3{font-family:var(--serif);font-weight:600;font-size:1.38rem;color:var(--ink);margin:.4rem 0 .35rem;line-height:1.3}
+.film .role{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.film p{font-size:.95rem;color:var(--soft);line-height:1.78;margin-top:.9rem}
+.band{margin-top:clamp(3.2rem,6vw,5rem);position:relative;border-radius:4px;overflow:hidden}
+.band img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.band .cap{position:absolute;left:0;right:0;bottom:0;padding:3.2rem 2.2rem 1.8rem;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.74));color:#fff;font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2.4vw,1.5rem);line-height:1.5}
+.band .cap small{display:block;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.85;margin-top:8px}
+
+/* ===== 生平页 · 时间轴 ===== */
+.timeline{position:relative;--t-time:clamp(92px,15vw,160px);--t-axis:44px}
+.timeline::before{content:'';position:absolute;top:10px;bottom:10px;left:calc(var(--t-time) + var(--t-axis)/2 - .5px);width:1px;background:var(--line)}
+.tl-item{display:grid;grid-template-columns:var(--t-time) var(--t-axis) 1fr;padding-bottom:clamp(2.2rem,4vw,3.2rem)}
+.tl-item:last-child{padding-bottom:0}
+.tl-time{font-family:var(--serif);font-size:1.1rem;color:var(--red);text-align:right;padding-top:3px;line-height:1.4}
+.tl-dot{justify-self:center;width:11px;height:11px;border-radius:50%;background:var(--red);margin-top:8px;box-shadow:0 0 0 4px var(--paper)}
+.tl-body{padding-left:clamp(1.2rem,3vw,2.4rem)}
+.tl-body h3{font-family:var(--serif);font-weight:600;font-size:1.3rem;color:var(--ink);line-height:1.4;margin-bottom:.5rem}
+.tl-body p{font-size:.96rem;color:var(--soft);line-height:1.78;max-width:36em}
+
+/* ===== 荣誉页 ===== */
+.honors{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.4rem,5vw,5rem);align-items:start}
+.award-row{display:flex;align-items:baseline;gap:2rem;padding:1.7rem 0;border-bottom:1px solid var(--line)}
+.award-row:first-child{padding-top:0}
+.award-row .yr{font-family:var(--serif);color:var(--red);font-size:1.12rem;min-width:86px}
+.award-row .nm{font-family:var(--serif);font-size:1.14rem;color:var(--ink);line-height:1.4}
+.award-row .dt{font-size:.92rem;color:var(--muted);margin-top:.35rem}
+.award-row .tag{margin-left:auto;flex-shrink:0;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--red);padding:4px 12px;border-radius:999px;white-space:nowrap}
+.hfigure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.hfigure .fig-caption{margin-top:16px;font-size:12px;color:var(--muted);letter-spacing:.06em;line-height:1.6;border-left:2px solid var(--red);padding-left:13px}
+.quotes{margin-top:clamp(4rem,8vw,6rem);display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem)}
+.bigquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.35rem,2.8vw,1.9rem);line-height:1.55;color:var(--ink);border-left:2px solid var(--red);padding-left:1.5rem}
+.bigquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:1.1rem}
+
+/* ===== 页脚 ===== */
+.site-footer{border-top:1px solid var(--line);padding:2.4rem 0 3rem;color:var(--muted);font-size:12px;letter-spacing:.05em}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* ===== 响应式 ===== */
+@media (max-width:1100px){
+  .films-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .intro{grid-template-columns:1fr}
+  .figure{max-width:440px;margin:0 auto 1rem;width:100%}
+  .quote{margin-top:2.2rem}
+  .facts{grid-template-columns:1fr;gap:1.5rem;padding:2.2rem 0}
+  .honors{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
+  .hfigure{max-width:440px;margin-top:1rem;width:100%}
+}
+@media (max-width:640px){
+  .films-grid{grid-template-columns:1fr}
+  .wrap,.nav-inner,.footer-inner{padding-left:20px;padding-right:20px}
+  .nav-links{gap:8px}
+  .nav-links a{font-size:13px;letter-spacing:.02em;padding:10px 7px}
+  .brand{padding:8px 4px}
+  .lang-btn{padding:9px 14px}
+  .tl-item{grid-template-columns:74px 34px 1fr}
+  .tl-time{font-size:1rem}
+  .sec-title{font-size:2.1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">U<em>.</em>THURMAN</a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#home" class="active"><span class="zh">首页</span><span class="en">Home</span></a>
+      <a href="#films"><span class="zh">作品</span><span class="en">Films</span></a>
+      <a href="#life"><span class="zh">生平</span><span class="en">Life</span></a>
+      <a href="#honors"><span class="zh">荣誉</span><span class="en">Honors</span></a>
+    </nav>
+    <button id="langBtn" class="lang-btn" type="button" aria-label="切换语言">EN</button>
+  </div>
+</header>
+
+<main>
+<!-- ===== 视图：首页（个人信息） ===== -->
+<section id="home" class="page active">
+  <div class="wrap">
+    <div class="hero">
+      <p class="kicker"><span class="zh">致敬 · 银幕缪斯</span><span class="en">Tribute · A Screen Muse</span></p>
+      <h1>UMA THURMAN</h1>
+      <div class="hero-rule"></div>
+      <p class="sub"><span class="zh">演员 &nbsp;·&nbsp; 缪斯 &nbsp;·&nbsp; 银幕传奇</span><span class="en">Actress &nbsp;·&nbsp; Muse &nbsp;·&nbsp; Screen Legend</span></p>
+      <div class="scrollcue">
+        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" aria-hidden="true"><path d="M7 1v14M2 11l5 5 5-5" stroke="#C01028" stroke-width="1.5"/></svg>
+        <span><span class="zh">向下滚动</span><span class="en">Scroll</span></span>
+      </div>
+    </div>
+
+    <!-- 简介板块 -->
+    <div class="section">
+      <header class="section-head">
+        <h2 class="sec-title"><span class="zh">简介</span><span class="en">Introduction</span></h2>
+        <div class="sec-rule"></div>
+      </header>
+      <div class="intro">
+        <figure class="figure">
+          <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/HZPhbmtcOoH9FAxCGdUce9YHnCe" alt="乌玛·瑟曼的黑白肖像">
+          <figcaption class="fig-caption"><span class="zh">乌玛·瑟曼 · 人像</span><span class="en">Uma Thurman · Portrait</span></figcaption>
+        </figure>
+        <div class="intro-copy">
+          <div class="anchor-label">UMA THURMAN</div>
+          <div class="copy-block">
+            <p class="zh">乌玛·瑟曼（Uma Thurman），1970年4月29日出生于美国马萨诸塞州波士顿，身高178cm，早年以模特身份出道。她的名字源自藏传佛教女神，意为“同情与怜悯”——父亲是哥伦比亚大学宗教学教授，母亲是瑞典籍心理分析医生。</p>
+            <p class="en">Uma Thurman, born April 29, 1970, in Boston, Massachusetts, stands 178 cm tall and began her career as a model. Her name comes from a goddess in Tibetan Buddhism, meaning “compassion and mercy” — her father was a professor of religion at Columbia University, and her mother is a Swedish-born psychotherapist.</p>
+          </div>
+          <div class="copy-block">
+            <p class="zh">1994年，她因昆汀·塔伦蒂诺的《低俗小说》中“米娅”一角提名奥斯卡最佳女配角，片中迷离眼神的画面成为影史经典。2003至2004年，她再度与昆汀合作《杀死比尔》系列，饰演复仇的“新娘”，获金球奖剧情类最佳女主角提名，奠定动作女星地位。她以独特气质游走于商业与艺术之间，是昆汀·塔伦蒂诺的银幕缪斯。</p>
+            <p class="en">In 1994, her role as “Mia” in Quentin Tarantino's Pulp Fiction earned her an Academy Award nomination for Best Supporting Actress, and the film's dreamlike gaze became a classic of cinema history. From 2003 to 2004, she reunited with Tarantino for the Kill Bill series, playing the avenging “Bride,” earning a Golden Globe nomination for Best Actress in a Drama and cementing her place as an action star. Moving between commercial and art cinema with her singular presence, she remains Tarantino's silver-screen muse.</p>
+          </div>
+          <blockquote class="quote">“I'm not interested in being a movie star. I'm interested in being an actor.”
+            <cite class="zh">—— 乌玛·瑟曼</cite><cite class="en">— Uma Thurman</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+    <!-- 个人档案 -->
+    <div class="section" style="padding-top:0">
+      <div class="facts">
+        <div class="fact">
+          <p class="k"><span class="zh">出生日期</span><span class="en">Born</span></p>
+          <p class="v"><span class="zh">1970年4月29日</span><span class="en">April 29, 1970</span></p>
+        </div>
+        <div class="fact">
+          <p class="k"><span class="zh">出生地</span><span class="en">Birthplace</span></p>
+          <p class="v"><span class="zh">美国 · 马萨诸塞州 · 波士顿</span><span class="en">Boston, Massachusetts, USA</span></p>
+        </div>
+        <div class="fact">
+          <p class="k"><span class="zh">身高</span><span class="en">Height</span></p>
+          <p class="v">178 cm</p>
+        </div>
+        <div class="fact">
+          <p class="k"><span class="zh">出道</span><span class="en">Debut</span></p>
+          <p class="v"><span class="zh">模特出道</span><span class="en">Began as a model</span></p>
+        </div>
+        <div class="fact">
+          <p class="k"><span class="zh">代表角色</span><span class="en">Iconic Roles</span></p>
+          <p class="v"><span class="zh">米娅·华莱士 · “新娘”</span><span class="en">Mia Wallace · The Bride</span></p>
+        </div>
+        <div class="fact">
+          <p class="k"><span class="zh">银幕荣誉</span><span class="en">Honors</span></p>
+          <p class="v"><span class="zh">奥斯卡提名 · 金球奖提名</span><span class="en">Oscar &amp; Golden Globe nominee</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 视图：作品（图片与文字） ===== -->
+<section id="films" class="page">
+  <div class="wrap">
+    <div class="section">
+      <header class="section-head">
+        <p class="kicker">FILMOGRAPHY</p>
+        <h2 class="sec-title"><span class="zh">电影作品</span><span class="en">Selected Films</span></h2>
+        <div class="sec-rule"></div>
+      </header>
+      <div class="films-grid">
+        <article class="film">
+          <div class="ph"><img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/G1RbbjYMjojaDdx4IwHcxWRWnLd" alt="《低俗小说》中的米娅·华莱士剧照"></div>
+          <p class="year">1994</p>
+          <h3><span class="zh">《低俗小说》</span><span class="en">Pulp Fiction</span></h3>
+          <p class="role"><span class="zh">饰 米娅·华莱士</span><span class="en">as Mia Wallace</span></p>
+          <p><span class="zh">昆汀·塔伦蒂诺执导，米娅一角为她赢得奥斯卡最佳女配角提名。氤氲的香烟与经典的扭扭舞，共同写下影史注脚。</span><span class="en">Directed by Quentin Tarantino. As Mia Wallace, Thurman earned an Oscar nomination — the haze of smoke and the legendary twist contest became cinema history.</span></p>
+        </article>
+        <article class="film">
+          <div class="ph"><img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/HI0mbsXLJoPFWTxDMOfcX3TMnde" alt="《杀死比尔》中持刀立于火焰前的新娘剧照"></div>
+          <p class="year">2003</p>
+          <h3><span class="zh">《杀死比尔 Vol.1》</span><span class="en">Kill Bill: Vol. 1</span></h3>
+          <p class="role"><span class="zh">饰 “新娘”</span><span class="en">as The Bride</span></p>
+          <p><span class="zh">昆汀为她量身打造的复仇诗篇：黄色连体衣与服部半藏之刃，凌厉斩获金球奖剧情类最佳女主角提名。</span><span class="en">The revenge saga Tarantino wrote for her — the yellow jumpsuit, the Hattori Hanzo blade, and a Golden Globe nomination for Best Actress in a Drama.</span></p>
+        </article>
+        <article class="film">
+          <div class="ph"><img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/Ebn4b2FRMoZZbTxv84pc6awxnDg" alt="《杀死比尔 Vol.2》中头顶利刃的新娘剧照"></div>
+          <p class="year">2004</p>
+          <h3><span class="zh">《杀死比尔 Vol.2》</span><span class="en">Kill Bill: Vol. 2</span></h3>
+          <p class="role"><span class="zh">饰 “新娘”</span><span class="en">as The Bride</span></p>
+          <p><span class="zh">复仇诗篇的下半阙：从刀光剑影走向内心修行，白眉道馆一段已成经典，最终在荒漠中回到起点。</span><span class="en">The quieter, deeper second half of the saga — from the sword to the spirit, ending where it all began in the desert.</span></p>
+        </article>
+        <article class="film">
+          <div class="ph"><img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/Yp7tbkRHeoFEg9xmcUYcbLJZnAg" alt="《千钧一发》中冷峻蓝调氛围下的艾琳剧照"></div>
+          <p class="year">1997</p>
+          <h3><span class="zh">《千钧一发》</span><span class="en">Gattaca</span></h3>
+          <p class="role"><span class="zh">饰 艾琳</span><span class="en">as Irene</span></p>
+          <p><span class="zh">安德鲁·尼科尔执导的未来寓言，冷峻蓝调之中，乌玛以沉静优雅为人性留出温度。</span><span class="en">Andrew Niccol's icy-blue sci-fi fable; Thurman's quiet grace gives the future a human pulse.</span></p>
+        </article>
+      </div>
+      <figure class="band">
+        <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/J6U2bjPjpoHO8Pxjq8Rc6lpCngh" alt="《低俗小说》中米娅与文森特的扭扭舞场景">
+        <figcaption class="cap"><span class="zh">《低俗小说》· 扭扭舞名场面 —— “You Never Can Tell”</span><span class="en">Pulp Fiction · The Twist Contest — “You Never Can Tell”</span><small><span class="zh">米娅与文森特 · 兔先生的餐厅</span><span class="en">Mia &amp; Vincent · Jack Rabbit Slim's</span></small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 视图：生平（时间轴） ===== -->
+<section id="life" class="page">
+  <div class="wrap">
+    <div class="section">
+      <header class="section-head">
+        <p class="kicker">LIFE &amp; CAREER</p>
+        <h2 class="sec-title"><span class="zh">生平大事记</span><span class="en">Life &amp; Career</span></h2>
+        <div class="sec-rule"></div>
+      </header>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">1970</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h3><span class="zh">出生于波士顿</span><span class="en">Born in Boston</span></h3>
+            <p><span class="zh">4月29日出生于美国马萨诸塞州波士顿。名字源自藏传佛教女神，意为“同情与怜悯”。</span><span class="en">Born in Boston, Massachusetts on April 29. Her name, drawn from a Tibetan Buddhist goddess, means “compassion and mercy.”</span></p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">1980s</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h3><span class="zh">以模特出道</span><span class="en">Modeling Debut</span></h3>
+            <p><span class="zh">青少年时期以模特身份进入公众视野，178cm 的身高与独特气质令她迅速受到瞩目。</span><span class="en">Began modeling as a teenager; her 178 cm frame and singular look drew early attention.</span></p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">1988</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h3><span class="zh">电影出道</span><span class="en">Film Debut</span></h3>
+            <p><span class="zh">出演《Johnny Be Good》等片，正式登上银幕，开启演员生涯。</span><span class="en">Steps onto the screen with roles including Johnny Be Good, beginning her acting career.</span></p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">1994</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h3><span class="zh">《低俗小说》</span><span class="en">Pulp Fiction</span></h3>
+            <p><span class="zh">饰演米娅·华莱士，提名奥斯卡最佳女配角；片中迷离眼神的画面成为影史经典。</span><span class="en">As Mia Wallace, nominated for the Academy Award for Best Supporting Actress; the film's dreamlike gaze became a classic of cinema history.</span></p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">1997</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h3><span class="zh">《千钧一发》</span><span class="en">Gattaca</span></h3>
+            <p><span class="zh">出演艾琳一角，在冷峻的基因未来寓言中留下沉静优雅的身影。</span><span class="en">Plays Irene in the austere genetic future of Gattaca, leaving a quiet, elegant mark.</span></p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">1998</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h3><span class="zh">长女玛雅·霍克出生</span><span class="en">Maya Hawke Is Born</span></h3>
+            <p><span class="zh">女儿玛雅·霍克出生，后亦成为演员，承继了她的银幕气质。</span><span class="en">Her daughter Maya Hawke is born; she would later follow her mother into acting.</span></p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">2003–04</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h3><span class="zh">《杀死比尔》</span><span class="en">Kill Bill</span></h3>
+            <p><span class="zh">再度与昆汀·塔伦蒂诺合作，饰演复仇的“新娘”，获金球奖剧情类最佳女主角提名，奠定动作女星地位。</span><span class="en">Reunites with Tarantino as The Bride, earning a Golden Globe nomination for Best Actress in a Drama and cementing her action-icon status.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 视图：荣誉与名言 ===== -->
+<section id="honors" class="page">
+  <div class="wrap">
+    <div class="section">
+      <header class="section-head">
+        <p class="kicker">AWARDS &amp; WORDS</p>
+        <h2 class="sec-title"><span class="zh">荣誉与名言</span><span class="en">Honors &amp; Words</span></h2>
+        <div class="sec-rule"></div>
+      </header>
+      <div class="honors">
+        <div class="honors-list">
+          <div class="award-row">
+            <p class="yr">1995</p>
+            <div>
+              <p class="nm"><span class="zh">奥斯卡最佳女配角提名</span><span class="en">Academy Award, Best Supporting Actress</span></p>
+              <p class="dt"><span class="zh">《低俗小说》 · 饰 米娅·华莱士</span><span class="en">Pulp Fiction · as Mia Wallace</span></p>
+            </div>
+            <span class="tag">NOM</span>
+          </div>
+          <div class="award-row">
+            <p class="yr">2004</p>
+            <div>
+              <p class="nm"><span class="zh">金球奖剧情类最佳女主角提名</span><span class="en">Golden Globe, Best Actress in a Drama</span></p>
+              <p class="dt"><span class="zh">《杀死比尔 Vol.1》 · 饰 “新娘”</span><span class="en">Kill Bill: Vol. 1 · as The Bride</span></p>
+            </div>
+            <span class="tag">NOM</span>
+          </div>
+          <div class="award-row">
+            <p class="yr"><span class="zh">至今</span><span class="en">Career</span></p>
+            <div>
+              <p class="nm"><span class="zh">三十余项获奖 · 六十余项提名</span><span class="en">30+ wins · 60+ nominations</span></p>
+              <p class="dt"><span class="zh">横跨电影、电视与舞台的职业生涯</span><span class="en">Across a career spanning film, television and stage</span></p>
+            </div>
+            <span class="tag"><span class="zh">累计</span><span class="en">TOTAL</span></span>
+          </div>
+        </div>
+        <figure class="hfigure">
+          <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/JIo3bETSbo15dlxJ1ODcvsFonYg" alt="乌玛·瑟曼出席活动的正式肖像">
+          <figcaption class="fig-caption"><span class="zh">乌玛·瑟曼 · 活动现场</span><span class="en">Uma Thurman · On the Red Carpet</span></figcaption>
+        </figure>
+      </div>
+      <div class="quotes">
+        <blockquote class="bigquote">“I'm not interested in being a movie star. I'm interested in being an actor.”
+          <cite class="zh">—— 乌玛·瑟曼</cite><cite class="en">— Uma Thurman</cite>
+        </blockquote>
+        <blockquote class="bigquote"><span class="zh">“复仇从来不是一条直线。”</span><span class="en">“Revenge is never a straight line.”</span>
+          <cite class="zh">——《杀死比尔》</cite><cite class="en">— Kill Bill</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><span class="zh">致敬主页 · 内容基于公开资料整理</span><span class="en">A tribute page · Compiled from public sources</span></p>
+    <p>© 2026 · UMA THURMAN</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  /* ---- 语言切换 ---- */
+  var root = document.documentElement;
+  var btn = document.getElementById('langBtn');
+  var saved = null;
+  try { saved = localStorage.getItem('uma-lang'); } catch(e){}
+  var lang = (saved === 'en' || saved === 'zh') ? saved : 'zh';
+  var TITLES = {
+    zh: { home:'乌玛·瑟曼 Uma Thurman · 致敬主页', films:'乌玛·瑟曼 · 电影作品', life:'乌玛·瑟曼 · 生平大事记', honors:'乌玛·瑟曼 · 荣誉与名言' },
+    en: { home:'Uma Thurman · Tribute', films:'Uma Thurman · Films', life:'Uma Thurman · Life', honors:'Uma Thurman · Honors' }
+  };
+  function setLang(l){
+    lang = l;
+    root.setAttribute('data-lang', l);
+    root.lang = (l === 'zh') ? 'zh-CN' : 'en';
+    btn.textContent = (l === 'zh') ? 'EN' : '中';
+    try { localStorage.setItem('uma-lang', l); } catch(e){}
+    syncTitle();
+  }
+  btn.addEventListener('click', function(){ setLang(lang === 'zh' ? 'en' : 'zh'); });
+
+  /* ---- Hash 路由 ---- */
+  var PAGES = ['home','films','life','honors'];
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var pages = document.querySelectorAll('.page');
+  function currentPage(){
+    var h = location.hash.replace('#','');
+    return (PAGES.indexOf(h) !== -1) ? h : 'home';
+  }
+  function syncTitle(){
+    var p = currentPage();
+    document.title = TITLES[lang][p] || TITLES[lang].home;
+  }
+  function route(){
+    var id = currentPage();
+    for (var i = 0; i < pages.length; i++){
+      pages[i].classList.toggle('active', pages[i].id === id);
+    }
+    for (var j = 0; j < navLinks.length; j++){
+      navLinks[j].classList.toggle('active', navLinks[j].getAttribute('href') === '#' + id);
+    }
+    syncTitle();
+    if (window.scrollY > 0){ window.scrollTo({ top:0, behavior:'auto' }); }
+  }
+  window.addEventListener('hashchange', route);
+
+  setLang(lang);
+  route();
+})();
+</script>
+</body>
+</html>
+</body>
+</html>
